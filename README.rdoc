@@ -2,8 +2,8 @@
 
 Topic式掲示板サンプルコードです。
 
-= ライセンス
+=== ライセンス
 MIT License
 
-= Rails バージョン
+=== Rails バージョン
 Rails 4.2.6
