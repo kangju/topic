@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @board.title %>
+</p>
+
+<p>
+  <strong>Creator name:</strong>
+  <%= @board.creator_name %>
+</p>
+<hr/>
+<p>
+<% @board.messages.each_with_index do |m,i| %>
+   <div>
+      <%= i+1 %>
+      <%= simple_format(h(m.message)) %>
+      name:<%= m.creator_name %><hr/>
+   </div>
+<% end %>
+</p>
+
+<p>
+<%= render 'messageform' %>
+</p>
+<hr/>
+<%= link_to 'Edit', edit_board_path(@board) %> |
+<%= link_to 'Back', boards_path %>
